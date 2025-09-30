@@ -1,0 +1,219 @@
+:root{
+    /*dark mode*/
+    --bgDarkM: #13121a;
+    --textD:#ffffff;
+    --inputD:#22222c;
+    --themeDBlur:#2c2d36;
+    --textDalt: #cfd0da ;/*alternative*/
+    /*light mode*/
+    --bgLightM: #f5f5f5;
+    --inputL:#e0e0e8;
+    --themeLBlur:#e0e0e833;
+    --textL:#2c2c34;
+    --textLalt: #27272b ;/*alternative*/
+    /*other assets*/
+    --charCount:#d2a1fb;
+    --wordCount:#ff9e00;
+    --senCount:#fe8159;
+
+    --font: "Poppins", sans-serif;                                       
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    outline: none;
+    border: none;
+}
+/*Light mode*/
+.light-mode{
+    background-color: var(--bgLightM);
+}
+.light-mode .switch-themes{
+    background-color: var(--themeLBlur);
+    border: 2px solid #a1a1a8;
+}
+.light-mode .title-main{
+    color: var(--textL);
+}
+.light-mode .text-input{
+    background-color: var(--inputL);
+    color: var(--textLalt);
+    border-color: #a1a1a8;
+}
+.light-mode .text-input:focus{
+    border-color: #75757a;
+}
+.light-mode .checks-list{
+    color: var(--textLalt);
+}
+.light-mode .checks-list .limit{
+    background-color: var(--themeLBlur);
+    border-color: #a1a1a8;
+    color: var(--textLalt);
+}
+.light-mode .checks-list .limit:focus{
+    border-color: #75757a;
+}
+.light-mode .letter-density .title{
+    color: var(--textL);
+}
+ .light-mode .letter-density .comment{
+    color: var(--textLalt);
+}
+/*default dark mode*/
+.dark-mode{
+    background-color: var(--bgDarkM);
+}
+
+.container{
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding:15px 20px;
+    max-width: 700px;
+}
+
+/*Header*/
+.header{
+    display: flex;
+    justify-content:  space-between;
+}
+.logo {
+    height: auto;
+    width: 180px;
+}
+.switch-themes{
+    padding: 8px;
+    border-radius:6px ;
+    height: auto;
+    width: 38px;
+    background-color: var(--themeDBlur);
+    border: 2px solid #555563;
+    cursor: pointer;
+}
+
+/*Main*/
+.title-main{
+    text-align: center;
+    color: var(--textD);
+    font-size: 30px;
+    font-weight: 580;
+    margin:48px 0 0 0 ;
+}
+.text-input{
+    resize: none;
+    background-color: var(--themeDBlur);
+    border: 2px solid #555563;
+    border-radius: 10px;
+    font-size: 18px;
+    color: var(--textDalt);
+    padding: 8px;
+    margin:25px 0 0 0;
+    width: 100%;
+    height: 180px;
+}
+.text-input:focus{
+    border-color: #7f7f8b;
+}
+.checks-list{
+    color: var(--textDalt);
+    margin: 4px 0 34px;
+}
+.checks-list div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px 0;
+}
+.checks-list .hidden-check{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checks-list .check{
+    width: 18px;
+    height: 18px;
+    border: 2px solid #555563;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+.checks-list .hidden-check:checked + .check{
+    background-color: var(--charCount);
+    border-color:var(--charCount);
+}
+.checks-list .limit{
+    background-color: var(--themeDBlur);
+    border: 2px solid #555563;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--textDalt);
+    padding: 4px;
+    width: 60px;
+    display: none;
+}
+.checks-list .limit.active{
+    display: block;
+}
+.checks-list .limit:focus{
+    border-color: #7f7f8b;
+}
+/*counters*/
+.counts-list{
+    display: flex ;
+    flex-direction: column;
+    gap: 15px;
+}
+.counts-list div{
+    width: 100%;
+    height:120px;
+    border-radius:10px ;
+    position: relative;
+    overflow: hidden;
+}
+.counts-list .characters{
+    background-color: var(--charCount);
+}
+.counts-list .words{
+    background-color: var(--wordCount);
+}
+.counts-list .sentences{
+    background-color: var(--senCount);
+}
+.counts-list object{
+    position: absolute;
+    top: -10px;
+    right: -50px;
+}
+.counts-list span:first-child{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 540;
+    top: 10px;
+    left: 20px;
+}
+.counts-list span:nth-child(2){
+    position: absolute;
+    font-size: 20px;
+    font-weight: 400; 
+    bottom: 25px;
+    left: 20px;
+}
+/*density*/
+.letter-density{
+    margin: 25px 0;
+}
+.letter-density .title{
+    color: var(--textD);
+    font-size:26px ;
+    font-weight: normal;
+    margin: 0 0 16px;
+}
+.letter-density .comment{
+    color: var(--textDalt);
+}

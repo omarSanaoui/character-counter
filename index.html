@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body class="dark-mode">
+    <div class="container ">
+        <header class="header">
+            <object class="logo" type="image/svg+xml" data="icons/logo-dark-theme.svg"></object>
+            <object class="switch-themes icon" data="icons/icon-sun.svg" type="image/svg+xml"></object>
+        </header>
+        <main class="main">
+            <h1 class="title-main">Analyze your text in <br> real-time.</h1>
+            <textarea class="text-input" placeholder="Start typing here...(or paste your text)"></textarea>
+            <div class="checks-list">
+                <div>
+                    <input type="checkbox" id="exclude-spaces" class="hidden-check">
+                    <span class="check"></span>
+                    <label>Exclude Spaces</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="set-limit" class="hidden-check">
+                    <span class="check"></span>
+                    <label>Set Character Limit</label>
+                    <input type="text" id="limit" class="limit" placeholder="Limit">
+                </div>
+                <p>Approx. reading time:</p>
+            </div>
+            <div class="counts-list">
+                <div class="characters">
+                    <span class="characters-counter">0</span>
+                    <span>Total Characters</span>
+                    <object data="icons/pattern-character-count.svg" type="image/svg+xml"></object>
+                </div>
+                <div class="words">
+                    <span class="words-counter">0</span>
+                    <span>Word Count</span>
+                    <object data="icons/pattern-word-count.svg" type="image/svg+xml"></object>
+                </div>
+                <div class="sentences">
+                    <span class="sentences-counter">0</span>
+                    <span>Total Characters</span>
+                    <object data="icons/pattern-sentence-count.svg" type="image/svg+xml"></object>
+                </div>
+            </div>
+            <div class="letter-density">
+                <h1 class="title">Letter Density</h1>
+                <p class="comment">No Characters found. Start typing to see letter density.</p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
