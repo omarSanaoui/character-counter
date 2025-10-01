@@ -62,6 +62,15 @@
  .light-mode .letter-density .comment{
     color: var(--textLalt);
 }
+.light-mode .letter-item{
+    color: var(--textLalt);
+}
+.light-mode .progress-bar{
+    background-color: #dddcd3;
+}
+.light-mode .progress-bar-fill{
+    background-color: var(--charCount);
+}
 /*default dark mode*/
 .dark-mode{
     background-color: var(--bgDarkM);
@@ -210,10 +219,38 @@
 }
 .letter-density .title{
     color: var(--textD);
-    font-size:26px ;
+    font-size:26px;
     font-weight: normal;
     margin: 0 0 16px;
 }
 .letter-density .comment{
     color: var(--textDalt);
+    font-size:16px;
+}
+.letter-container{
+    margin: 25px 0;
+}
+.letter-item{
+    display: flex;
+    align-items: center;
+    color: var(--textDalt);
+    font-size:16px;
+}
+.character{
+    margin: 0 25px 0 0;
+}
+.item-counter{
+    margin:0 0 0 25px;
+}
+.progress-bar{
+    background-color: #22232c;
+    width: 100%;
+    height:12px;
+    border-radius: 10px;
+}
+.progress-bar-fill{
+    background-color: var(--charCount);
+    width: 80%;
+    height:12px;
+    border-radius: 10px;
 }
