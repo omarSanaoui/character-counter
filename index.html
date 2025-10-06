@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    
+
 </head>
 
 <body class="dark-mode">
@@ -21,7 +21,7 @@
             <img src="icons/icon-sun.svg" class="switch-themes icon">
         </header>
         <main class="main">
-            <h1 class="title-main">Analyze your text in <br> real-time.</h1>
+            <h1 class="title-main">Analyze your text <br> in real-time.</h1>
             <textarea class="text-input" placeholder="Start typing here...(or paste your text)"></textarea>
             <div class="checks-list">
                 <div>
@@ -35,7 +35,7 @@
                     <label>Set Character Limit</label>
                     <input type="text" id="limit" class="limit" placeholder="Limit">
                 </div>
-                <p>Approx. reading time:</p>
+                <p class="reading-time">Approx. reading time:<span></span></p>
             </div>
             <div class="counts-list">
                 <div class="characters">
@@ -50,23 +50,14 @@
                 </div>
                 <div class="sentences">
                     <span class="sentences-counter">0</span>
-                    <span>Total Characters</span>
+                    <span>Sentence Count</span>
                     <object data="icons/pattern-sentence-count.svg" type="image/svg+xml"></object>
                 </div>
             </div>
             <div class="letter-density">
                 <h1 class="title">Letter Density</h1>
                 <p class="comment">No Characters found. Start typing to see letter density.</p>
-                <div class="letter-container">
-                    <div class="letter-item">
-                        <span class="character">P</span>
-                        <div class="progress-bar">
-                            <div class="progress-bar-fill"></div>
-                        </div>
-                        <span class="item-counter">30</span>
-                        <span class="percent">(80%)</span>
-                    </div>
-                </div>
+                <div class="letter-container"></div>
             </div>
         </main>
     </div>
